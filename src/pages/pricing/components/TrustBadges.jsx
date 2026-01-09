@@ -24,9 +24,9 @@ const TrustBadges = () => {
       description: "Automatic data protection"
     },
     {
-      icon: "Users",
-      title: "500+ Businesses",
-      description: "Trust ERP-SMB"
+      icon: "Headphones",
+      title: "Founder-Led Support",
+      description: "Personal guidance"
     },
     {
       icon: "Award",

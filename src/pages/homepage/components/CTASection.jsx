@@ -31,7 +31,7 @@ const CTASection = () => {
             </h2>
 
             <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-              Join 500+ Indian SMBs who transformed their business operations. Schedule a personalized demo and see how ERP-SMB can work for your business.
+              Schedule a personalized demo and see how ERP-SMB can work for your business. Get founder-led guidance tailored to your specific needs.
             </p>
 
             <div className="space-y-4 mb-10">
@@ -71,38 +71,36 @@ const CTASection = () => {
 
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-10 border-2 border-white/20 shadow-2xl">
-              <div className="grid grid-cols-2 gap-5 mb-6">
+              <div className="space-y-5">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <Icon name="Users" size={28} color="white" className="mb-3" />
-                  <p className="text-3xl md:text-4xl font-bold text-white mb-2">500+</p>
-                  <p className="text-sm md:text-base text-white/80 font-medium">Active Businesses</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <Icon name="Star" size={28} color="white" className="mb-3" />
-                  <p className="text-3xl md:text-4xl font-bold text-white mb-2">4.9/5</p>
-                  <p className="text-sm md:text-base text-white/80 font-medium">Customer Rating</p>
-                </div>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 mb-5 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
-                    <Icon name="TrendingUp" size={24} color="white" />
-                  </div>
-                  <div>
-                    <p className="text-white font-bold text-base">Average ROI</p>
-                    <p className="text-white/80 text-sm">Within 3 months</p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                      <Icon name="Shield" size={24} color="white" />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold text-base">Founder-Led Support</p>
+                      <p className="text-white/80 text-sm">Personal guidance throughout</p>
+                    </div>
                   </div>
                 </div>
-                <p className="text-4xl font-bold text-white">320%</p>
-              </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center gap-4">
-                  <Icon name="Clock" size={24} color="white" />
-                  <div>
-                    <p className="text-white font-bold text-base">Setup Time</p>
-                    <p className="text-white/80 text-sm">Get started in 24 hours</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    <Icon name="Clock" size={24} color="white" />
+                    <div>
+                      <p className="text-white font-bold text-base">Quick Setup</p>
+                      <p className="text-white/80 text-sm">Get started in days, not months</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    <Icon name="Package" size={24} color="white" />
+                    <div>
+                      <p className="text-white font-bold text-base">Built for Trading</p>
+                      <p className="text-white/80 text-sm">Designed for inventory businesses</p>
+                    </div>
                   </div>
                 </div>
               </div>

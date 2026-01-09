@@ -2,12 +2,11 @@ import React, { useEffect } from 'react';
 import Header from '../../components/ui/Header';
 import Footer from '../../components/ui/Footer';
 import HeroSection from './components/HeroSection';
-import CustomerLogos from './components/CustomerLogos';
 import TrustSection from './components/TrustSection';
+import FounderTrustSection from './components/FounderTrustSection';
 import IndustryCards from './components/IndustryCards';
 import FeaturePreview from './components/FeaturePreview';
 import ScreenshotCarousel from './components/ScreenshotCarousel';
-import TestimonialSection from './components/TestimonialSection';
 import CTASection from './components/CTASection';
 import FAQSection from './components/FAQSection';
 
@@ -19,15 +18,14 @@ const Homepage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      
+
       <main className="main-content flex-1">
         <HeroSection />
         <TrustSection />
-        <CustomerLogos />
+        <FounderTrustSection />
         <IndustryCards />
         <ScreenshotCarousel />
         <FeaturePreview />
-        <TestimonialSection />
         <CTASection />
         <FAQSection />
       </main>

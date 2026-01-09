@@ -15,9 +15,9 @@ const DemoRequest = () => {
 
   const handleFormSubmit = (formData) => {
     setIsSubmitting(true);
-    
+
     console.log('Demo Request Submitted:', formData);
-    
+
     setTimeout(() => {
       setIsSubmitting(false);
     }, 2000);
@@ -27,9 +27,9 @@ const DemoRequest = () => {
     <>
       <Helmet>
         <title>Schedule Your Personalized Demo | ERP-SMB - Transform Your Business</title>
-        <meta 
-          name="description" 
-          content="Book a personalized ERP demo tailored to your Indian SMB needs. Get founder-led consultation, see real-world examples, and discover how to transition from Excel/Tally seamlessly." 
+        <meta
+          name="description"
+          content="Book a personalized ERP demo tailored to your Indian SMB needs. Get founder-led consultation, see real-world examples, and discover how to transition from Excel/Tally seamlessly."
         />
         <meta name="keywords" content="ERP demo, business software demo, SMB ERP India, Excel to ERP migration, Tally alternative, personalized business consultation" />
       </Helmet>
@@ -45,13 +45,13 @@ const DemoRequest = () => {
                   <Icon name="Calendar" size={16} />
                   <span>Schedule Your Free Demo</span>
                 </div>
-                
+
                 <h1 className="font-heading font-bold text-foreground text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6">
                   See How ERP-SMB Transforms Your Business Operations
                 </h1>
-                
+
                 <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
-                  Get a personalized 45-minute demo tailored to your business type and challenges. 
+                  Get a personalized 45-minute demo tailored to your business type and challenges.
                   See real-world examples from your industry and get a clear migration roadmap from Excel/Tally.
                 </p>
               </div>
@@ -70,7 +70,7 @@ const DemoRequest = () => {
                         Request Your Personalized Demo
                       </h2>
                       <p className="text-sm md:text-base text-muted-foreground">
-                        Fill in your details below and we'll schedule a demo at your preferred time. 
+                        Fill in your details below and we'll schedule a demo at your preferred time.
                         Our team will contact you within 24 hours to confirm.
                       </p>
                     </div>
@@ -83,9 +83,9 @@ const DemoRequest = () => {
 
                 <div className="space-y-6 md:space-y-8">
                   <WhatsAppContact />
-                  
+
                   <FounderTestimonial />
-                  
+
                   <RecentDemoBookings />
 
                   <div className="bg-gradient-to-br from-info/10 to-info/5 border border-info/20 rounded-lg p-4 md:p-6">
@@ -123,7 +123,7 @@ const DemoRequest = () => {
                     <h3 className="font-heading font-semibold text-foreground text-sm md:text-base mb-4">
                       Frequently Asked Questions
                     </h3>
-                    
+
                     <div className="space-y-4">
                       <div>
                         <p className="font-medium text-foreground text-sm mb-1">
@@ -170,28 +170,31 @@ const DemoRequest = () => {
           <section className="bg-gradient-to-br from-primary/5 to-secondary/5 py-12 md:py-16 lg:py-20">
             <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
               <Icon name="Users" size={48} color="var(--color-primary)" className="mx-auto mb-4 md:mb-6" />
-              
+
               <h2 className="font-heading font-bold text-foreground text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6">
-                Join 500+ Indian SMBs Growing with Confidence
+                Get Personalized, Founder-Led Guidance
               </h2>
-              
+
               <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
-                From trading companies to manufacturers, businesses across India trust ERP-SMB 
-                to bring clarity to their operations and confidence to their decisions.
+                Every demo is personally conducted by our founders who understand the unique challenges
+                of Indian trading and distribution businesses. Get tailored advice for your specific needs.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-3xl mx-auto">
                 <div className="bg-card border border-border rounded-lg p-4 md:p-6">
-                  <p className="text-3xl md:text-4xl font-bold text-primary mb-2">98%</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">Customer Satisfaction</p>
+                  <Icon name="Calendar" size={32} color="var(--color-primary)" className="mx-auto mb-3" />
+                  <p className="text-sm md:text-base font-semibold text-foreground mb-1">45-Minute Demo</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">Tailored to your business</p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-4 md:p-6">
-                  <p className="text-3xl md:text-4xl font-bold text-success mb-2">40%</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">Average Time Saved</p>
+                  <Icon name="Users" size={32} color="var(--color-primary)" className="mx-auto mb-3" />
+                  <p className="text-sm md:text-base font-semibold text-foreground mb-1">Founder-Led</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">Personal consultation</p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-4 md:p-6">
-                  <p className="text-3xl md:text-4xl font-bold text-secondary mb-2">&lt;2 weeks</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">Implementation Time</p>
+                  <Icon name="Shield" size={32} color="var(--color-primary)" className="mx-auto mb-3" />
+                  <p className="text-sm md:text-base font-semibold text-foreground mb-1">No Pressure</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">Zero obligation</p>
                 </div>
               </div>
             </div>

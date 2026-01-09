@@ -5,8 +5,8 @@ const TrustIndicators = () => {
   const trustElements = [
     {
       icon: 'Users',
-      title: '500+ SMBs Trust Us',
-      description: 'Growing businesses across India rely on our platform'
+      title: 'Built for Indian SMBs',
+      description: 'Designed specifically for trading and distribution businesses'
     },
     {
       icon: 'Clock',

@@ -144,11 +144,11 @@ const ScreenshotCarousel = () => {
           {/* Main Screenshot Display */}
           <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
             {/* Screenshot Image */}
-            <div className="relative aspect-video bg-gradient-to-br from-blue-100 to-cyan-100">
+            <div className="relative aspect-video bg-gradient-to-br from-slate-100 to-slate-200">
               <img
                 src={screenshots?.[currentIndex]?.image}
                 alt={screenshots?.[currentIndex]?.alt}
-                className="w-full h-full object-cover transition-opacity duration-500"
+                className="w-full h-full object-contain p-4 transition-opacity duration-500"
                 loading="lazy"
               />
 
