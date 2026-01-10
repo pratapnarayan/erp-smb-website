@@ -56,11 +56,11 @@ const Footer = () => {
             <div className="mb-4">
               <p className="text-sm text-muted-foreground mb-2">
                 <Icon name="Mail" size={16} className="inline mr-2" />
-                <a href="mailto:support@erp-smb.com" className="hover:text-primary transition-colors">support@erp-smb.com</a>
+                <a href="mailto:pratapnpandey83@gmail.com" className="hover:text-primary transition-colors">pratapnpandey83@gmail.com</a>
               </p>
               <p className="text-sm text-muted-foreground">
                 <Icon name="MessageCircle" size={16} className="inline mr-2" />
-                WhatsApp Support: <a href="https://wa.me/919876543210" className="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">+91-9876543210</a>
+                WhatsApp Support: <a href="https://wa.me/919319033678" className="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">+91-93190 33678</a>
               </p>
             </div>
             <div className="flex items-center gap-3">

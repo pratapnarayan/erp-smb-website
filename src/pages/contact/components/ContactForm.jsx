@@ -3,6 +3,7 @@ import Input from '../../../components/ui/Input';
 import Select from '../../../components/ui/Select';
 import Button from '../../../components/ui/Button';
 import Icon from '../../../components/AppIcon';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ const ContactForm = () => {
     inquiryType: '',
     message: ''
   });
-  
+
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -29,33 +30,33 @@ const ContactForm = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    
+
     if (!formData?.name?.trim()) {
       newErrors.name = 'Name is required';
     }
-    
+
     if (!formData?.email?.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/?.test(formData?.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
-    
+
     if (!formData?.phone?.trim()) {
       newErrors.phone = 'Phone number is required';
     } else if (!/^[6-9]\d{9}$/?.test(formData?.phone?.replace(/\s/g, ''))) {
       newErrors.phone = 'Please enter a valid 10-digit Indian mobile number';
     }
-    
+
     if (!formData?.inquiryType) {
       newErrors.inquiryType = 'Please select an inquiry type';
     }
-    
+
     if (!formData?.message?.trim()) {
       newErrors.message = 'Message is required';
     } else if (formData?.message?.trim()?.length < 10) {
       newErrors.message = 'Message must be at least 10 characters';
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors)?.length === 0;
   };
@@ -67,16 +68,32 @@ const ContactForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e?.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
-    
+
     setIsSubmitting(true);
-    
-    setTimeout(() => {
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        company: formData.company || 'Not provided',
+        inquiry_type: formData.inquiryType,
+        message: formData.message
+      };
+
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
       setIsSubmitting(false);
       setSubmitSuccess(true);
       setFormData({
@@ -87,11 +104,15 @@ const ContactForm = () => {
         inquiryType: '',
         message: ''
       });
-      
+
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setIsSubmitting(false);
+      alert('Failed to send message. Please try again or contact us directly via WhatsApp.');
+    }
   };
 
   return (
@@ -120,24 +141,24 @@ const ContactForm = () => {
           <Input
             label="Full Name"
             type="text"
-            placeholder="Rajesh Kumar"
+            placeholder="Pratap Pandey"
             value={formData?.name}
             onChange={(e) => handleChange('name', e?.target?.value)}
             error={errors?.name}
             required
           />
-          
+
           <Input
             label="Email Address"
             type="email"
-            placeholder="rajesh@company.com"
+            placeholder="pratap@company.com"
             value={formData?.email}
             onChange={(e) => handleChange('email', e?.target?.value)}
             error={errors?.email}
             required
           />
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <Input
             label="Phone Number"
@@ -148,7 +169,7 @@ const ContactForm = () => {
             error={errors?.phone}
             required
           />
-          
+
           <Input
             label="Company Name"
             type="text"
@@ -157,7 +178,7 @@ const ContactForm = () => {
             onChange={(e) => handleChange('company', e?.target?.value)}
           />
         </div>
-        
+
         <Select
           label="Inquiry Type"
           placeholder="Select inquiry type"
@@ -167,7 +188,7 @@ const ContactForm = () => {
           error={errors?.inquiryType}
           required
         />
-        
+
         <div>
           <label className="block text-sm font-medium text-foreground mb-2">
             Message <span className="text-destructive">*</span>
@@ -182,7 +203,7 @@ const ContactForm = () => {
             <p className="text-sm text-destructive mt-1">{errors?.message}</p>
           )}
         </div>
-        
+
         <Button
           type="submit"
           variant="default"
@@ -193,7 +214,7 @@ const ContactForm = () => {
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </Button>
-        
+
         <p className="text-xs text-muted-foreground text-center">
           By submitting this form, you agree to our privacy policy and terms of service
         </p>

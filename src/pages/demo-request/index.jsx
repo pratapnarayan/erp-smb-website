@@ -5,22 +5,49 @@ import Footer from '../../components/ui/Footer';
 import Icon from '../../components/AppIcon';
 import DemoForm from './components/DemoForm';
 import TrustIndicators from './components/TrustIndicators';
-import RecentDemoBookings from './components/RecentDemoBookings';
+
 import WhatsAppContact from './components/WhatsAppContact';
 import FounderTestimonial from './components/FounderTestimonial';
 import DemoExpectations from './components/DemoExpectations';
+import emailjs from '@emailjs/browser';
 
 const DemoRequest = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleFormSubmit = (formData) => {
+  const handleFormSubmit = async (formData) => {
     setIsSubmitting(true);
 
-    console.log('Demo Request Submitted:', formData);
+    try {
+      const templateParams = {
+        from_name: formData.fullName,
+        from_email: formData.email,
+        phone: formData.phone,
+        company: formData.companyName,
+        business_type: formData.businessType,
+        employee_count: formData.employeeCount,
+        current_tools: Array.isArray(formData.currentTools) ? formData.currentTools.join(', ') : formData.currentTools,
+        primary_challenge: formData.primaryChallenge,
+        preferred_date: formData.preferredDate,
+        preferred_time: formData.preferredTime,
+        additional_notes: formData.additionalNotes || 'None'
+      };
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-    }, 2000);
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_DEMO_TEMPLATE,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('Demo request sent successfully');
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      alert('Failed to send request. Please try again or contact us directly via WhatsApp.');
+    } finally {
+      setTimeout(() => {
+        setIsSubmitting(false);
+      }, 2000);
+    }
   };
 
   return (
@@ -85,8 +112,6 @@ const DemoRequest = () => {
                   <WhatsAppContact />
 
                   <FounderTestimonial />
-
-                  <RecentDemoBookings />
 
                   <div className="bg-gradient-to-br from-info/10 to-info/5 border border-info/20 rounded-lg p-4 md:p-6">
                     <div className="flex items-start gap-3 mb-4">

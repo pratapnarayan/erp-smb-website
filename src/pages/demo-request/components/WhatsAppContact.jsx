@@ -4,7 +4,7 @@ import Button from '../../../components/ui/Button';
 
 const WhatsAppContact = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '919876543210';
+    const phoneNumber = '919319033678';
     const message = encodeURIComponent('Hi! I would like to schedule a demo for ERP-SMB.');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };

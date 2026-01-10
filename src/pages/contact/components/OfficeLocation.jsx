@@ -4,8 +4,8 @@ import Icon from '../../../components/AppIcon';
 const OfficeLocation = () => {
   const officeDetails = {
     address: "Tower B, 4th Floor, Cyber City\nGurgaon, Haryana 122002\nIndia",
-    phone: "+91 124 4567890",
-    email: "support@erp-smb.com",
+    phone: "+91 93190 33678",
+    email: "pratapnpandey83@gmail.com",
     hours: "Monday - Friday: 9:00 AM - 6:00 PM IST\nSaturday: 10:00 AM - 2:00 PM IST\nSunday: Closed"
   };
 
@@ -53,7 +53,7 @@ const OfficeLocation = () => {
         <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-6">
           Visit Our Office
         </h3>
-        
+
         <div className="space-y-6">
           {contactInfo?.map((info, index) => (
             <div key={index} className="flex items-start gap-4">
@@ -80,7 +80,7 @@ const OfficeLocation = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-6 pt-6 border-t border-border">
           <div className="flex items-start gap-3 p-4 bg-info/10 rounded-lg">
             <Icon name="Info" size={20} color="var(--color-info)" className="flex-shrink-0 mt-0.5" />

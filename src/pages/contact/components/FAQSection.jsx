@@ -27,7 +27,7 @@ const FAQSection = () => {
     },
     {
       question: "How do I report a technical issue or bug?",
-      answer: "Technical issues can be reported through multiple channels: email (support@erp-smb.com), WhatsApp, or the contact form selecting 'Technical Support'. Please include screenshots and steps to reproduce the issue for faster resolution."
+      answer: "Technical issues can be reported through multiple channels: email (pratapnpandey83@gmail.com), WhatsApp, or the contact form selecting 'Technical Support'. Please include screenshots and steps to reproduce the issue for faster resolution."
     }
   ];
 
@@ -64,11 +64,10 @@ const FAQSection = () => {
                 className="flex-shrink-0 text-muted-foreground transition-transform duration-300"
               />
             </button>
-            
+
             <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index ? 'max-h-96' : 'max-h-0'
-              }`}
+              className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-96' : 'max-h-0'
+                }`}
             >
               <div className="p-4 pt-0 text-sm md:text-base text-muted-foreground">
                 {faq?.answer}

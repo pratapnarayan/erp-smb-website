@@ -5,17 +5,17 @@ import Icon from '../../../components/AppIcon';
 const FounderTestimonial = () => {
   return (
     <div className="bg-card border border-border rounded-lg p-4 md:p-6">
-      <div className="flex items-start gap-3 md:gap-4 mb-4">
+      <div className="flex items-center gap-4 md:gap-5 mb-4">
         <Image
-          src="https://img.rocket.new/generatedImages/rocket_gen_img_161280329-1763301853399.png"
-          alt="Professional headshot of Indian male founder in formal blue shirt with warm smile and confident expression"
-          className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover flex-shrink-0" />
+          src="/founder-pratap-pandey.png"
+          alt="Professional headshot of Pratap Pandey, Founder & CEO of ERP-SMB, wearing blue polo shirt with confident smile"
+          className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover flex-shrink-0" />
 
         <div className="flex-1">
-          <h4 className="font-heading font-semibold text-foreground text-sm md:text-base">
-            Rajesh Kumar
+          <h4 className="font-heading font-semibold text-foreground text-base md:text-lg mb-1">
+            Pratap Pandey
           </h4>
-          <p className="text-xs md:text-sm text-muted-foreground">
+          <p className="text-sm md:text-base text-muted-foreground">
             Founder & CEO, ERP-SMB
           </p>
         </div>
@@ -23,12 +23,12 @@ const FounderTestimonial = () => {
       <div className="mb-3 md:mb-4">
         <div className="flex gap-1 mb-2">
           {[1, 2, 3, 4, 5]?.map((star) =>
-          <Icon
-            key={star}
-            name="Star"
-            size={16}
-            color="var(--color-warning)"
-            className="fill-current" />
+            <Icon
+              key={star}
+              name="Star"
+              size={16}
+              color="var(--color-warning)"
+              className="fill-current" />
 
           )}
         </div>

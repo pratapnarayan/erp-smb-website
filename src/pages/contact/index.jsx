@@ -16,7 +16,7 @@ const Contact = () => {
       title: "WhatsApp Business",
       description: "Get instant support through WhatsApp - the fastest way to reach us",
       actionLabel: "Chat on WhatsApp",
-      action: () => window.open('https://wa.me/911234567890', '_blank'),
+      action: () => window.open('https://wa.me/919319033678', '_blank'),
       details: [
         "Instant response during business hours",
         "Share screenshots and documents easily",
@@ -29,7 +29,7 @@ const Contact = () => {
       title: "Phone Support",
       description: "Speak directly with our support team for immediate assistance",
       actionLabel: "Call Now",
-      action: () => window.location.href = 'tel:+911244567890',
+      action: () => window.location.href = 'tel:+919319033678',
       details: [
         "Direct connection to support team",
         "Technical troubleshooting",
@@ -42,7 +42,7 @@ const Contact = () => {
       title: "Email Support",
       description: "Send detailed queries and receive comprehensive responses",
       actionLabel: "Send Email",
-      action: () => window.location.href = 'mailto:support@erp-smb.com',
+      action: () => window.location.href = 'mailto:pratapnpandey83@gmail.com',
       details: [
         "Detailed technical queries",
         "Attach documents and screenshots",
@@ -71,17 +71,17 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact Us - ERP-SMB | Get Support & Schedule Demo</title>
-        <meta 
-          name="description" 
-          content="Contact ERP-SMB for support, sales inquiries, or demo scheduling. Multiple channels including WhatsApp, phone, email. Response within 2 hours. Founder-led support for Indian SMBs." 
+        <meta
+          name="description"
+          content="Contact ERP-SMB for support, sales inquiries, or demo scheduling. Multiple channels including WhatsApp, phone, email. Response within 2 hours. Founder-led support for Indian SMBs."
         />
       </Helmet>
       <div className="min-h-screen flex flex-col bg-background">
         <Header />
-        
+
         <main className="flex-1 main-content">
           <ContactHero />
-          
+
           <section className="py-12 md:py-16 lg:py-20">
             <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8 md:mb-12">
@@ -92,18 +92,18 @@ const Contact = () => {
                   We offer multiple ways to connect with us. Select the method that works best for you.
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
                 {contactMethods?.map((method, index) => (
                   <ContactMethodCard key={index} {...method} />
                 ))}
               </div>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-16">
                 <ContactForm />
                 <OfficeLocation />
               </div>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
                 <div className="lg:col-span-2">
                   <FAQSection />
@@ -114,7 +114,7 @@ const Contact = () => {
               </div>
             </div>
           </section>
-          
+
           <section className="bg-gradient-to-br from-primary/5 to-secondary/5 py-12 md:py-16">
             <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
@@ -141,7 +141,7 @@ const Contact = () => {
             </div>
           </section>
         </main>
-        
+
         <Footer />
       </div>
     </>

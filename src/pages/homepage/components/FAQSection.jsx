@@ -68,9 +68,8 @@ const FAQSection = () => {
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96' : 'max-h-0'
-                }`}
+                className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-96' : 'max-h-0'
+                  }`}
               >
                 <div className="px-5 md:px-6 pb-5 md:pb-6 pt-0">
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
@@ -86,7 +85,7 @@ const FAQSection = () => {
           <p className="text-muted-foreground mb-4">Still have questions?</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919319033678"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-success text-white rounded-lg hover:bg-success/90 transition-colors duration-300 font-medium"
@@ -95,7 +94,7 @@ const FAQSection = () => {
               <span>WhatsApp Us</span>
             </a>
             <a
-              href="mailto:support@erp-smb.com"
+              href="mailto:pratapnpandey83@gmail.com"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-card border border-border text-foreground rounded-lg hover:bg-muted transition-colors duration-300 font-medium"
             >
               <Icon name="Mail" size={20} />
