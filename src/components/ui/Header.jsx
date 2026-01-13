@@ -55,9 +55,9 @@ const Header = () => {
               className="hidden lg:inline-flex"
               onClick={() => window.location.href = '/demo-request'}
             >
-              Schedule Demo
+              Book Free Demo
             </Button>
-            
+
             <button
               onClick={toggleMobileMenu}
               className="header-mobile-toggle"
@@ -77,7 +77,7 @@ const Header = () => {
               </div>
               <span>ERP-SMB</span>
             </Link>
-            
+
             <button
               onClick={closeMobileMenu}
               className="mobile-menu-close"
@@ -109,7 +109,7 @@ const Header = () => {
                 window.location.href = '/demo-request';
               }}
             >
-              Schedule Demo
+              Book Free Demo
             </Button>
           </div>
         </div>

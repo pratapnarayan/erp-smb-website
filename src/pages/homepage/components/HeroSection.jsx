@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="text-center lg:text-left">
@@ -28,12 +28,12 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Replace Excel & Tally With{' '}
-              <span className="bg-gradient-to-r from-primary via-blue-600 to-secondary bg-clip-text text-transparent">Real-Time Control Over Your Business</span>
+              Replace Excel & Tally with{' '}
+              <span className="bg-gradient-to-r from-primary via-blue-600 to-secondary bg-clip-text text-transparent">Powerful Cloud ERP</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Track orders, inventory, receivables, and cash flow in one simple system designed for growing Indian SMBs.
+              Manage Accounting, Inventory, Sales & GST in One System. Designed for growing Indian businesses.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
@@ -48,14 +48,18 @@ const HeroSection = () => {
                 Get a Free Personalized ERP Demo
               </Button>
               <Button
-                variant="outline"
+                variant="success"
                 size="lg"
-                iconName="PlayCircle"
+                iconName="MessageCircle"
                 iconPosition="left"
-                onClick={() => navigate('/product-features')}
-                className="w-full sm:w-auto border-2 hover:bg-primary/5 text-base px-8 py-6"
+                onClick={() => {
+                  const phoneNumber = '919319033678';
+                  const message = encodeURIComponent('Hi, I want a free ERP demo for my business.');
+                  window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+                }}
+                className="w-full sm:w-auto border-2 hover:bg-success/90 text-base px-8 py-6 bg-[#25D366] text-white hover:bg-[#20BA5A]"
               >
-                See How It Works
+                Chat on WhatsApp
               </Button>
             </div>
 
@@ -86,7 +90,7 @@ const HeroSection = () => {
                 </div>
                 <span className="text-white text-sm font-semibold ml-2">ERP-SMB Dashboard</span>
               </div>
-              
+
               <div className="p-6 md:p-8 bg-gradient-to-br from-gray-50 to-white">
                 <div className="grid grid-cols-2 gap-4 mb-5">
                   <div className="bg-white p-5 rounded-xl shadow-md border border-border/50 hover:shadow-lg transition-shadow duration-300">
@@ -99,7 +103,7 @@ const HeroSection = () => {
                     <p className="text-2xl md:text-3xl font-bold text-foreground mb-1">₹12.5L</p>
                     <p className="text-xs font-semibold text-success">+23% this month</p>
                   </div>
-                  
+
                   <div className="bg-white p-5 rounded-xl shadow-md border border-border/50 hover:shadow-lg transition-shadow duration-300">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Orders</span>

@@ -16,7 +16,11 @@ const Contact = () => {
       title: "WhatsApp Business",
       description: "Get instant support through WhatsApp - the fastest way to reach us",
       actionLabel: "Chat on WhatsApp",
-      action: () => window.open('https://wa.me/919319033678', '_blank'),
+      action: () => {
+        const phoneNumber = '919319033678';
+        const message = encodeURIComponent('Hi, I want a free ERP demo for my business.');
+        window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+      },
       details: [
         "Instant response during business hours",
         "Share screenshots and documents easily",

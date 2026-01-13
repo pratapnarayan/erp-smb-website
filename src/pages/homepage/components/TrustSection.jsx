@@ -5,23 +5,23 @@ const TrustSection = () => {
   const trustPoints = [
     {
       icon: 'MapPin',
-      title: 'Built for Indian SMBs',
-      description: 'Designed specifically for trading, wholesale, and distribution businesses in India'
+      title: 'Designed for Indian Businesses & GST-Ready',
+      description: 'Built specifically for Indian SMBs with complete GST compliance and reporting'
     },
     {
-      icon: 'Package',
-      title: 'Designed for Inventory-Driven Businesses',
-      description: 'Perfect for businesses managing stock, orders, and credit sales'
+      icon: 'RefreshCw',
+      title: 'Easy Migration from Excel & Tally',
+      description: 'Seamless transition with data import and step-by-step onboarding support'
     },
     {
       icon: 'Users',
       title: 'Founder-Led Onboarding & Support',
-      description: 'Personal guidance from our founders throughout your journey'
+      description: 'Personal guidance from our founders throughout your journey with fast response times'
     },
     {
       icon: 'Shield',
-      title: 'Secure Role-Based Access',
-      description: 'Bank-grade security with granular permissions that grow with your business'
+      title: 'Secure & Scalable Cloud Platform',
+      description: 'Bank-grade security with role-based access that grows with your business'
     }
   ];
 

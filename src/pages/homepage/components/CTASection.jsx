@@ -54,17 +54,21 @@ const CTASection = () => {
                 onClick={() => navigate('/demo-request')}
                 className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto shadow-xl hover:shadow-2xl transition-all duration-300 text-base px-8 py-6"
               >
-                Get a Free Personalized ERP Demo
+                Get a Free ERP Demo
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                iconName="Phone"
+                iconName="MessageCircle"
                 iconPosition="left"
-                onClick={() => navigate('/contact')}
+                onClick={() => {
+                  const phoneNumber = '919319033678';
+                  const message = encodeURIComponent('Hi, I want a free ERP demo for my business.');
+                  window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+                }}
                 className="border-2 border-white text-white hover:bg-white/10 w-full sm:w-auto text-base px-8 py-6"
               >
-                Talk to Founder
+                Chat on WhatsApp
               </Button>
             </div>
           </div>
