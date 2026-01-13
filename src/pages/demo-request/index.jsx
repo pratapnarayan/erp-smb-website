@@ -53,12 +53,12 @@ const DemoRequest = () => {
   return (
     <>
       <Helmet>
-        <title>Schedule Your Personalized Demo | ERP-SMB - Transform Your Business</title>
+        <title>Get Free ERP Demo for Indian SMBs | Book Your Demo | ERP-SMB</title>
         <meta
           name="description"
-          content="Book a personalized ERP demo tailored to your Indian SMB needs. Get founder-led consultation, see real-world examples, and discover how to transition from Excel/Tally seamlessly."
+          content="Book a free personalized ERP demo for your Indian SMB. See how to replace Excel & Tally with GST-ready cloud ERP. Founder-led consultation. Response within 2 hours."
         />
-        <meta name="keywords" content="ERP demo, business software demo, SMB ERP India, Excel to ERP migration, Tally alternative, personalized business consultation" />
+        <meta name="keywords" content="ERP demo, free ERP demo India, business software demo, SMB ERP demo, Excel to ERP migration, Tally alternative demo, GST-ready ERP" />
       </Helmet>
 
       <div className="min-h-screen flex flex-col bg-background">
@@ -74,7 +74,7 @@ const DemoRequest = () => {
                 </div>
 
                 <h1 className="font-heading font-bold text-foreground text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6">
-                  See How ERP-SMB Transforms Your Business Operations
+                  Get Your Free ERP Demo
                 </h1>
 
                 <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
@@ -94,11 +94,10 @@ const DemoRequest = () => {
                   <div className="bg-card border border-border rounded-lg p-6 md:p-8 shadow-sm">
                     <div className="mb-6 md:mb-8">
                       <h2 className="font-heading font-semibold text-foreground text-xl md:text-2xl mb-2">
-                        Request Your Personalized Demo
+                        Book Your Free Demo
                       </h2>
                       <p className="text-sm md:text-base text-muted-foreground">
-                        Fill in your details below and we'll schedule a demo at your preferred time.
-                        Our team will contact you within 24 hours to confirm.
+                        Fill in your details below. Our team will contact you within 2 hours to schedule your personalized demo.
                       </p>
                     </div>
 

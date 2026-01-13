@@ -138,9 +138,11 @@ const Pricing = () => {
                 </p>
               </div>
 
-              <BillingToggle billingCycle={billingCycle} onToggle={setBillingCycle} />
+              <div className="mb-4">
+                <BillingToggle billingCycle={billingCycle} onToggle={setBillingCycle} />
+              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+              <div className="pt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
                 {pricingData?.map((plan) =>
                   <PricingCard
                     key={plan?.tier}
